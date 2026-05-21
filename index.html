@@ -1,0 +1,241 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Closet Mind</title>
+    <link rel="stylesheet" href="styles.css">
+    <link
+        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600&family=Playfair+Display:ital,wght@0,600;0,700;1,600&display=swap"
+        rel="stylesheet">
+    <meta name="theme-color" content="#ffffff">
+</head>
+
+<body>
+
+    <div id="login-screen" class="screen active">
+        <div class="login-content">
+            <img src="1.jpg" alt="Closet Mind Logo" class="logo-image"
+                onerror="this.src='https://via.placeholder.com/300x300?text=Closet+Mind'">
+            <button id="btn-enter" class="btn-gradient">Entrar</button>
+        </div>
+    </div>
+
+    <div id="app-screen" class="screen hidden app-layout">
+
+        <header class="app-header">
+            <h2 id="header-title" class="serif-title">Inicio</h2>
+            <div class="header-icons">
+                <svg width="24" height="24" fill="none" stroke="#1E293B" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                </svg>
+                <svg width="24" height="24" fill="none" stroke="#1E293B" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M15 17h5l-1.405-1.405A2.032 2.032 0 0118 14.158V11a6.002 6.002 0 00-4-5.659V5a2 2 0 10-4 0v.341C7.67 6.165 6 8.388 6 11v3.159c0 .538-.214 1.055-.595 1.436L4 17h5m6 0v1a3 3 0 11-6 0v-1m6 0H9">
+                    </path>
+                </svg>
+            </div>
+        </header>
+
+        <main class="app-content">
+
+            <div id="tab-inicio" class="tab-pane active">
+                <div class="welcome-card">
+                    <h3 class="serif-title">Bienvenida a Closet Mind</h3>
+                    <p>Organiza tu armario, descubre nuevos looks y deja que la IA potencie tu estilo.</p>
+                </div>
+
+                <div class="action-buttons">
+                    <div class="action-btn">
+                        <div class="icon-circle">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                            </svg>
+                        </div>
+                        <span>Organiza</span>
+                    </div>
+                    <div class="action-btn">
+                        <div class="icon-circle">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M5 3v4M3 5h4M6 17v4m-2-2h4m5-16l2.286 6.857L21 12l-5.714 2.143L13 21l-2.286-6.857L5 12l5.714-2.143L13 3z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>Combina</span>
+                    </div>
+                    <div class="action-btn">
+                        <div class="icon-circle">
+                            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                                </path>
+                            </svg>
+                        </div>
+                        <span>Inspírate</span>
+                    </div>
+                </div>
+
+                <h4 class="section-title">Recomendaciones para hoy</h4>
+                <div class="recommendation-card">
+                    <div class="rec-header">
+                        <span class="tag">Look casual</span>
+                        <span class="temp">🌤 18°C</span>
+                    </div>
+                    <div class="image-mockup">
+                        <img src="3.jpg" alt="Mockup Outfits"
+                            style="width: 100%; border-radius: 12px; object-fit: cover; height: 250px; object-position: top;">
+                    </div>
+                    <button class="btn-outline">Ver detalles</button>
+                </div>
+            </div>
+
+            <div id="tab-outfits" class="tab-pane hidden">
+                <div class="category-tabs">
+                    <span class="cat-tab active">Todo</span>
+                    <span class="cat-tab">Tops</span>
+                    <span class="cat-tab">Bottoms</span>
+                    <span class="cat-tab">Vestidos</span>
+                </div>
+
+                <div class="grid-clothes">
+                    <div class="cloth-item">
+                        <div class="cloth-img bg-light"></div>
+                        <p>Blazer Beige</p>
+                    </div>
+                    <div class="cloth-item">
+                        <div class="cloth-img bg-light"></div>
+                        <p>Camisa Blanca</p>
+                    </div>
+                    <div class="cloth-item">
+                        <div class="cloth-img bg-light"></div>
+                        <p>Jeans Rectos</p>
+                    </div>
+                    <div class="cloth-item">
+                        <div class="cloth-img bg-dark"></div>
+                        <p>Vestido Negro</p>
+                    </div>
+                </div>
+                <button class="btn-gradient w-100 mt-20">+ Añadir prenda</button>
+            </div>
+
+            <div id="tab-escanear" class="tab-pane hidden text-center">
+                <div class="scan-container">
+                    <div class="scan-circle">
+                        <div class="scan-inner">
+                            <svg width="40" height="40" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                    d="M8.111 16.404a5.5 5.5 0 017.778 0M12 20h.01m-7.08-7.071c3.904-3.905 10.236-3.905 14.141 0M1.394 9.393c5.857-5.857 15.355-5.857 21.213 0">
+                                </path>
+                            </svg>
+                        </div>
+                    </div>
+                    <h3 class="serif-title mt-20">Acerca la etiqueta RFID</h3>
+                    <p class="text-muted mt-10">a la parte trasera del dispositivo para escanear la prenda al instante.
+                    </p>
+                    <p class="scanning-text mt-20">Escaneando dispositivo...</p>
+                </div>
+                <button class="btn-outline w-100 mt-30">Añadir manualmente</button>
+            </div>
+
+            <div id="tab-inspiracion" class="tab-pane hidden">
+                <div class="search-bar">
+                    <svg width="20" height="20" fill="none" stroke="#94A3B8" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M21 21l-6-6m2-5a7 7 0 11-14 0 7 7 0 0114 0z"></path>
+                    </svg>
+                    <input type="text" placeholder="Buscar inspiración...">
+                </div>
+
+                <div class="category-tabs mt-10">
+                    <span class="cat-tab active">Todo</span>
+                    <span class="cat-tab">Casual</span>
+                    <span class="cat-tab">Elegante</span>
+                </div>
+
+                <div class="image-mockup mt-20">
+                    <img src="2.jpg" alt="Landing Inspiración"
+                        style="width: 100%; border-radius: 12px; display: block; box-shadow: 0 4px 10px rgba(0,0,0,0.05);">
+                </div>
+            </div>
+
+            <div id="tab-perfil" class="tab-pane hidden">
+                <div class="profile-header text-center">
+                    <div class="avatar-large">CM</div>
+                    <h2 class="serif-title mt-10">Mi Perfil</h2>
+                    <p class="text-muted">invitado@closetmind.com</p>
+                </div>
+                <ul class="settings-list mt-20">
+                    <li>Mi Armario Digital <svg width="20" height="20" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg></li>
+                    <li>Preferencias de Estilo <svg width="20" height="20" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg></li>
+                    <li>Configuración RFID <svg width="20" height="20" fill="none" stroke="currentColor"
+                            viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7">
+                            </path>
+                        </svg></li>
+                </ul>
+                <button class="btn-outline w-100 mt-30 text-danger" id="btn-logout"
+                    style="color: #ef4444; border-color: #ef4444;">Cerrar sesión</button>
+            </div>
+
+        </main>
+
+        <nav class="bottom-nav">
+            <a href="#" class="nav-link active" data-target="tab-inicio" data-title="Inicio">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6">
+                    </path>
+                </svg>
+                <span>Inicio</span>
+            </a>
+            <a href="#" class="nav-link" data-target="tab-outfits" data-title="Mi Armario">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+                </svg>
+                <span>Outfits</span>
+            </a>
+            <a href="#" class="nav-link scan-btn-wrapper" data-target="tab-escanear" data-title="Escanear RFID">
+                <div class="scan-btn-bg">
+                    <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                        <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                            d="M12 4v1m6 11h2m-6 0h-2v4m0-11v3m0 0h.01M12 12h4.01M16 20h4M4 12h4m12 0h.01M5 8h2a1 1 0 001-1V5a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1zm14 0h2a1 1 0 001-1V5a1 1 0 00-1-1h-2a1 1 0 00-1 1v2a1 1 0 001 1zM5 20h2a1 1 0 001-1v-2a1 1 0 00-1-1H5a1 1 0 00-1 1v2a1 1 0 001 1z">
+                        </path>
+                    </svg>
+                </div>
+                <span>Escanear</span>
+            </a>
+            <a href="#" class="nav-link" data-target="tab-inspiracion" data-title="Inspiración">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z">
+                    </path>
+                </svg>
+                <span>Inspiración</span>
+            </a>
+            <a href="#" class="nav-link" data-target="tab-perfil" data-title="Perfil">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                        d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path>
+                </svg>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
