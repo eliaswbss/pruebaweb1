@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+    <title>Smart Attendance Demo</title>
+    <link rel="stylesheet" href="styles.css">
+    <!-- Carga de fuentes modernas -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;600;700&display=swap" rel="stylesheet">
+    <meta name="theme-color" content="#1e1e2d">
+</head>
+<body>
+
+    <!-- PANTALLA SPLASH -->
+    <div id="splash-screen" class="screen active">
+        <div class="splash-content">
+            <img src="1.jpg" alt="Logo" class="logo-image" onerror="this.src='https://via.placeholder.com/150?text=Logo'">
+            <div class="loader"></div>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE LANDING / DESCARGA -->
+    <div id="landing-screen" class="screen hidden">
+        <div class="landing-header">
+            <h2>Smart Attendance</h2>
+            <p>La nueva forma de gestionar tu tiempo</p>
+        </div>
+        
+        <div class="landing-mockup">
+            <img src="2.jpg" alt="App Preview" class="preview-image" onerror="this.src='https://via.placeholder.com/300x500?text=App+Preview'">
+        </div>
+
+        <div class="landing-actions">
+            <button id="btn-download" class="btn-primary">
+                <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M4 16v1a3 3 0 003 3h10a3 3 0 003-3v-1m-4-4l-4 4m0 0l-4-4m4 4V4"></path></svg>
+                Instalar App
+            </button>
+            <p class="demo-text" id="btn-demo">O ver demostración interactiva</p>
+        </div>
+    </div>
+
+    <!-- PANTALLA DE LA APP (NAVEGACIÓN) -->
+    <div id="app-screen" class="screen hidden app-layout">
+        
+        <!-- Header de la App -->
+        <header class="app-header">
+            <div class="header-left">
+                <h3>Hola, Usuario</h3>
+                <p>Bienvenido de nuevo</p>
+            </div>
+            <div class="header-right">
+                <div class="avatar">U</div>
+            </div>
+        </header>
+
+        <!-- Contenido principal scrollable -->
+        <main class="app-content">
+            
+            <!-- Tab Inicio -->
+            <div id="tab-home" class="tab-content active">
+                <div class="status-card">
+                    <p>Estado de hoy</p>
+                    <h2>Trabajando</h2>
+                    <div class="pulse-indicator"></div>
+                </div>
+                
+                <h4 class="section-title">Actividad Reciente</h4>
+                <div class="image-wrapper">
+                    <img src="3.jpg" alt="App UI" onerror="this.src='https://via.placeholder.com/350x300?text=Dashboard+Stats'">
+                </div>
+            </div>
+
+            <!-- Tab Calendario -->
+            <div id="tab-calendar" class="tab-content hidden">
+                <h4 class="section-title">Mi Calendario</h4>
+                <div class="calendar-placeholder">
+                    <div class="calendar-grid">
+                        <div class="day header">L</div><div class="day header">M</div><div class="day header">X</div><div class="day header">J</div><div class="day header">V</div><div class="day header">S</div><div class="day header">D</div>
+                        <!-- Generado por JS o hardcoded -->
+                        <div class="day empty"></div><div class="day">1</div><div class="day">2</div><div class="day present">3</div><div class="day absent">4</div><div class="day">5</div><div class="day">6</div>
+                        <div class="day">7</div><div class="day present">8</div><div class="day present">9</div><div class="day today">10</div><div class="day">11</div><div class="day">12</div><div class="day">13</div>
+                    </div>
+                </div>
+                <div class="legend">
+                    <span class="dot present"></span> Presente
+                    <span class="dot absent"></span> Ausente
+                </div>
+            </div>
+
+            <!-- Tab Perfil -->
+            <div id="tab-profile" class="tab-content hidden">
+                <div class="profile-header">
+                    <div class="avatar-large">U</div>
+                    <h2>Usuario Demo</h2>
+                    <p>Desarrollador Frontend</p>
+                </div>
+                <ul class="settings-list">
+                    <li>Mis datos personales <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></li>
+                    <li>Solicitar vacaciones <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></li>
+                    <li>Configuración de la app <svg width="20" height="20" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 5l7 7-7 7"></path></svg></li>
+                </ul>
+                <button class="btn-logout" id="btn-logout">Cerrar Sesión</button>
+            </div>
+
+        </main>
+
+        <!-- Bottom Navigation Bar -->
+        <nav class="bottom-nav">
+            <a href="#" class="nav-item active" data-target="tab-home">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 12l2-2m0 0l7-7 7 7M5 10v10a1 1 0 001 1h3m10-11l2 2m-2-2v10a1 1 0 01-1 1h-3m-6 0a1 1 0 001-1v-4a1 1 0 011-1h2a1 1 0 011 1v4a1 1 0 001 1m-6 0h6"></path></svg>
+                <span>Inicio</span>
+            </a>
+            <a href="#" class="nav-item" data-target="tab-calendar">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M8 7V3m8 4V3m-9 8h10M5 21h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v12a2 2 0 002 2z"></path></svg>
+                <span>Calendario</span>
+            </a>
+            <a href="#" class="nav-item" data-target="tab-profile">
+                <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 7a4 4 0 11-8 0 4 4 0 018 0zM12 14a7 7 0 00-7 7h14a7 7 0 00-7-7z"></path></svg>
+                <span>Perfil</span>
+            </a>
+        </nav>
+    </div>
+
+    <!-- PANTALLA DE INSTALACIÓN SIMULADA -->
+    <div id="install-overlay" class="install-overlay hidden">
+        <div class="install-card">
+            <div class="spinner"></div>
+            <p>Instalando aplicación...</p>
+            <div class="progress-bar">
+                <div class="progress"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
